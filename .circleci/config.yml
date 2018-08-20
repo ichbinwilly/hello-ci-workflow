@@ -12,12 +12,5 @@ jobs:
       - run: echo "A first hello"
       - run: npm install
       - run: mkdir ~/junit
-      - run:
-          command: mocha test --reporter mocha-junit-reporter
-          environment:
-            MOCHA_FILE: junit/test-results.xml
-          when: always
-      - store_test_results:
-          path: ~/junit
-      - store_artifacts:
-          path: ~/junit
+    test:
+      - npm test  #每一個deploy到github上的commit都會執行npm test
