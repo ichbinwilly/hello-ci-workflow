@@ -9,7 +9,7 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - checkout
-      - run: echo "A first hello"
       - run: npm install
       - run: npm test
       - run: mkdir ~/junit
+      - run: echo "A first hello"
