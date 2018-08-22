@@ -1,11 +1,7 @@
 # try to build circleci
 # Build and test with custom container image for ARM and x64 with xvfb and mocha
 # https://github.com/electron/electron/blob/master/.circleci/config.yml
-# - checkout
-      # - run: npm install
-      # - run: npm test
-      # - run: mkdir ~/junit
-      # - run: echo "A first hello"
+
 version: 2
 jobs:
   build:
@@ -13,7 +9,7 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - checkout
-       - run: npm install
-       - run: npm test
-       - run: mkdir ~/junit
-       - run: echo "A first hello"
+      - run: npm install
+      - run: npm test
+      - run: mkdir ~/junit
+      - run: echo "A first hello"
