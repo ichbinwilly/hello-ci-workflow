@@ -11,7 +11,9 @@ jobs:
     docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
       - image: circleci/node:10-browsers
     steps:
+    # The steps collection is an ordered list of run directives
       - checkout
+      # Each run directive is executed in the order in which it was declared
       - run: npm install
       - run: npm test
       - run: mkdir ~/junit
