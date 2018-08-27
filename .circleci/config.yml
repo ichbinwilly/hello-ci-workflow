@@ -3,13 +3,18 @@
 # https://github.com/electron/electron/blob/master/.circleci/config.yml
 
 version: 2
+# This indicates the version of the CircleCI platform you are using. 2.0 is the most recent version
 jobs:
+# The jobs level contains a collection of arbitrarily named children
   build:
+  # build is the first named child in the jobs collection
     docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
       - image: circleci/node:10-browsers
     steps:
+    # The steps collection is an ordered list of run directives
       - checkout
+      # Each run directive is executed in the order in which it was declared
       - run: npm install
-      - run: npm test
-      - run: mkdir ~/junit
+      # execute the unit test
+      - run: npm test      
       - run: echo "A first hello"
