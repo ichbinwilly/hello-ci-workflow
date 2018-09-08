@@ -4,6 +4,6 @@
 
 # Introduction
 
-This project is to demo node.js + CircleCI 2.0. The configuration can be found in .circleci folder which introduces a new key for version: 2.
+This project is to demo node.js + CircleCI 2.0. CircleCI 2.0 configuration **config.yml** can be found in .circleci folder.
 
-> Note: Projects currently running on CircleCI 1.0 are no longer supported.
+> Note: Projects currently running on CircleCI 1.0 are no longer supported. Must migrate to Circle 2.0. See the [details](https://circleci.com/sunset1-0/) about the migration.
