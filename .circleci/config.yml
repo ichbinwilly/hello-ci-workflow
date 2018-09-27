@@ -18,3 +18,8 @@ jobs:
       # execute the unit test
       - run: npm test      
       - run: echo "A first hello"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
